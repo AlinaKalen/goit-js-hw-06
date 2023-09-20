@@ -19,12 +19,14 @@ const images = [
 
 
 images.forEach(image => {
-  const li = `<li style = "margin-bottom: 10px; display: flex;
-  list-style: none;
-  padding: 0;" ><img src="${image.url}" alt="${image.alt}" width = "100%";
-  height = "auto";/></li>`;
+  const li = `<li style = 'margin-bottom: 10px';><img src="${image.url}" alt="${image.alt}" width = "100%";
+  height = "auto"/></li>`;
   galleryList.insertAdjacentHTML('beforeend', li);
 
-  console.log(li);
+
+  galleryList.style.listStyle = 'none';
+  galleryList.style.padding = '0';
+  
+   console.log(li);
 });
 
