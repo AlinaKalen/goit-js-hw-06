@@ -1,13 +1,6 @@
 
 
 
-//const items = document.querySelectorAll('.item');
-//console.log(items);
-
-
-//const items = document.getElementsByClassName('item')
-//console.log(items);
-
 
 const categoriesList = document.querySelector('#categories');
 console.log(`Number of categories: ${categoriesList.children.length}`);
