@@ -16,17 +16,27 @@ const images = [
   },
 ];
 
-
-
-images.forEach(image => {
-  const li = `<li style = 'margin-bottom: 10px';><img src="${image.url}" alt="${image.alt}" width = "100%";
-  height = "auto"/></li>`;
-  galleryList.insertAdjacentHTML('beforeend', li);
-
+const galleryItems = images
+  .map(image => `<li style = 'margin-bottom: 10px';><img src="${image.url}" alt="${image.alt}" width = "100%";
+  height = "auto" /></li>`)
+  .join('');
+  galleryList.insertAdjacentHTML('beforeend', galleryItems);
 
   galleryList.style.listStyle = 'none';
   galleryList.style.padding = '0';
+
   
-   console.log(li);
-});
+
+
+// images.forEach(image => {
+//   const li = `<li style = 'margin-bottom: 10px';><img src="${image.url}" alt="${image.alt}" width = "100%";
+//   height = "auto"/></li>`;
+//   galleryList.insertAdjacentHTML('beforeend', li);
+
+
+//   galleryList.style.listStyle = 'none';
+//   galleryList.style.padding = '0';
+  
+//    console.log(li);
+// });
 
