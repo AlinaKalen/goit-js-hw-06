@@ -5,10 +5,11 @@ const categoriesList = document.querySelector('#categories');
 const categoryItems = categoriesList.children;
 console.log(`Number of categories: ${categoryItems.length}`);
 
-for (const categoryItem of categoryItems) { const categoryName = categoryItem.querySelector('h2').textContent;
-const categoryElements = categoryItem.querySelector('ul').children;
-console.log(`Category: ${categoryName}`);
-  console.log(`Elements: ${categoryElements.length}`);
+for (const categoryItem of categoryItems) { 
+    const categoryName = categoryItem.firstElementChild.textContent;
+    const categoryElements = categoryItem.lastElementChild.children;
+    console.log(`Category: ${categoryName}`);
+    console.log(`Elements: ${categoryElements.length}`);
 }
 
 
